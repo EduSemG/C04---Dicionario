@@ -4,16 +4,16 @@
 
 using namespace std;
 
-//struct para representar os nós e as adjacências do grafo
+//struct para representar os nos e as adjacências do grafo
 struct Palavra {
     string nome;
     int x, y, z;
 
-    //vetor de significados funciona como a lista de adjacência do grafo (arestas)
+    //vetor de significados funciona como a lista de adjacencia do grafo (arestas)
     vector<string> significados;
 };
 
-//o dicionario, que armazena os vértices do grafo
+//o dicionario, que armazena os vertices do grafo
 vector<Palavra> dicionario;
 
 void limparEntrada(){
@@ -81,7 +81,7 @@ void listarSinonimos(){
     cin >> busca;
 
     int indice = -1;
-    // Primeiro achamos a palavra no dicionario
+    //primeiro achar a palavra no dicionario
     for (int i = 0; i < dicionario.size(); i++) {
         if (dicionario[i].nome == busca) {
             indice = i;
@@ -109,7 +109,7 @@ void listarSinonimos(){
                     break;
                 }
             }
-            if (temComum) break; //se achou um significado igual é sinonimo
+            if (temComum) break; //se achou um significado igual e sinonimo
         }
         
         if (temComum) {
